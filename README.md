@@ -6,27 +6,15 @@ A WebSocket server for the Nitro Aura 1-vs-1 Tic Tac Toe game. This server handl
 
 ```bash
 # Install dependencies
-npm install
+# LockBlock 2D Platformer
 
 # Start the server (production)
 npm start
 
-# Start the server with hot reload (development)
-npm run dev
-
-# Run linting
-npm run lint
 ```
-
-Server runs on port 8080 by default.
-
-## Protocol
 
 ### Client → Server Messages
 
-```js
-// Join a room
-{
   "type": "joinRoom",
   "payload": {
     "roomId": "uuid-string",  // Optional - system will create if not provided
@@ -46,9 +34,7 @@ Server runs on port 8080 by default.
 
 ### Server → Client Messages
 
-```js
 // Room state update (after join or move)
-{
   "type": "room:state",
   "roomId": "uuid-string",
   "board": [null,null,null,null,"X",null,null,null,null],
